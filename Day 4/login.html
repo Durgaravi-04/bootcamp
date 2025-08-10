@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <Style>
+    body{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+    }
+        form{
+            width: 500px;
+            height:280px;
+            background-color: bisque;
+            border:1px solid black ; 
+            align-items: center;
+            justify-content: space-evenly;
+            display: flex;
+            flex-direction: column;
+            border-radius: 30px;
+            position: relative;
+        }
+        .inp input{
+            border: none;
+            outline:none
+        }
+        .inp{
+            background-color: rgb(255, 255, 255);
+            border:1px solid black;
+            padding :10px;
+            border-radius: 20px;
+        }
+        .banner{
+            border:1px solid black; 
+            padding:15px;
+            background-color: rgb(188, 226, 246);
+            border-radius: 20px;
+            position:absolute;
+            top:-20px;
+        }
+    </Style>
+</head>
+<body>
+    <form>
+        <div class="banner">
+            LOGIN CARD
+        </div>
+        <div class="inp">
+            <label for="user">
+                <i class="fa-regular fa-circle-user"></i>    
+            </label>
+            <input type="text" name="username" id="user"value="" placeholder="Username">
+        </div>
+        <div class="inp">
+            <label for="pass">
+                <i class="fa-regular fa-circle-user"></i>    
+            </label>
+            <input type="password" name="password" id="pass" value="" placeholder="Password">
+        </div>
+        <button>login</button>
+    </form>
+    
+</body>
+</html>

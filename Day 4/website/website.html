@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2Pkf6dp+1lYBgG3Dmyu+F9m+VJX0V0rF+M3JjZJrKk5j5H0h6G1l1l9U9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" 
+  />
+    <style>
+        body{
+            margin: 0;
+            
+        }
+        .header{
+            margin-top: 0px;
+        }
+        .nav{
+            width:100%;
+            height:90px;
+            display: flex;
+            background-color: rgb(0, 0, 0); 
+            font-size: 1.5rem; 
+        }
+        .b1{
+            width:30%;
+            /* background-color: blue; */
+            height: 100%;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+        .b2{
+            width:40%;
+            /* background-color: rgb(211, 175, 75); */
+            height: 100%;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+        .b3{
+            width:30%;
+            /* background-color: rgb(208, 111, 37); */
+            height: 100%;
+            display: flex;
+            align-items: center; 
+            position: relative;
+            justify-content: space-evenly;
+        }
+        .box3{
+          padding-left: 20px;
+          padding-right: 20px;
+          display: flex;
+          gap: 19px;
+        }
+        .container{
+            width:100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .container img{
+            width: 100%;
+            margin-top: -2px;
+        }
+        .main{
+            width:100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: black;
+        }
+        .card{
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          
+        }
+        .cards{
+            height:400px;
+            width:350px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border:1px solid black;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px rgb(54, 52, 52);
+            background-color: rgb(95, 94, 94);
+            position: relative;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        .cards img{
+            width:100%;
+            height:60%;
+            display: flex;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .cards:hover{
+            transform: scale(1.1);
+            transition: .6s;
+            cursor: pointer;
+        }
+        .card p{
+            color: aliceblue;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .cards button{
+            position: absolute;
+            margin-top: 100%;
+            padding:10px;
+            background-color: rgb(139, 156, 162);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #020202;
+            width: 100%;
+            color: whitesmoke;
+            padding: 40px 20px;
+            margin-top: 0px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;   
+        }
+        h3{
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 5px;
+        }
+        li{
+            list-style-type: none;
+            margin: 15px;
+        }
+        nav a {
+          color: white;
+          text-decoration: none;
+        }
+        .nav a:visited {
+          color: white;
+        }
+        .nav i {
+          color: white;
+          cursor:pointer;
+        }
+        .b2{
+          color: white;
+        }
+        .b3 {
+           position: relative; 
+        }
+       .location {
+            position: relative;
+        }  
+        .menu-box {
+          position: relative;
+        }
+
+        .menu-box summary {
+          list-style: none;
+          cursor: pointer;
+        }
+        .menu-popup {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 400px;
+          height: 400px;
+          background: rgb(165, 165, 165);
+          border: 1px solid black;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        .search-bar {
+          width: 90%;
+          padding: 8px;
+          margin-bottom: 20px;
+          border-radius: 20px;
+        }
+
+        .menu-popup ul {
+          list-style: none;
+          padding: 0;
+        }
+
+        .menu-popup li {
+          padding: 10px 0;
+          border-bottom: 1px solid #ccc;
+          cursor: pointer;
+        }
+        .location {
+          position: relative;
+        }
+
+        .location summary {
+          list-style: none;
+          cursor: pointer;
+        }
+        .loc-popup {
+          position: absolute;
+          margin: 10px;
+          top: 100%;
+          right: 0;
+          width: 400px;
+          height: 300px;
+          background: rgb(165, 165, 165);
+          border: 1px solid black;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+        }
+        .loc-popup p{
+          margin-top: 0;
+        }
+
+        .pincode-input {
+          width: 80%;
+          padding: 10px;
+          border-radius: 20px;
+        }
+
+        .submit-btn {
+          padding: 10px;
+          width: 30%;
+          background-color: black;
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 20px;
+          align-self: center;
+          margin-top: 20px;
+        }
+
+
+     </style>
+</head>
+<body>
+    <header class="header">
+            <div class="nav">
+               <div class="b1">
+                   <details class="menu-box">
+                  <summary><i class="fa-solid fa-bars"></i></summary>
+                  <div class="menu-popup">
+                    <input type="text" placeholder="Search..." class="search-bar">
+                    <ul>
+                      <li>Model</li>
+                      <li>Buy</li>
+                      <li>Service</li>
+                      <li>Brand</li>
+                    </ul>
+                  </div>
+                </details>
+                </div>
+               
+                
+
+                <div class="b2">
+                   Mercedes-Benz
+                </div>
+                <div class="b3">
+                    <div class="box3">
+                      <i class="fa-regular fa-star"></i>
+                      <details class="location">
+                        <summary><i class="fa-solid fa-location-dot"></i></summary>
+                        <div class="loc-popup">
+                          <h4>Enter Pincode</h4>
+                          <p style="font-size: smaller;">Please enter your pincode so we can provide you with location specific information, including pricing and offers.</p>
+                          <input type="text" placeholder="Enter Pincode" class="pincode-input">
+                          <button class="submit-btn">Submit</button>
+                        </div>
+                      </details>
+                      <a href="weblogin.html">
+                        <i class="fa-solid fa-circle-user"></i>
+                      </a>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <main class="main"> 
+        <div class="container">
+            <img src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg" alt="">
+        </div> 
+        <div class="card">
+          <div class="cards">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcXXlnEPcBrIgDRQ531Yf2acMvn3-Wm6kNOQ&s" alt="">
+            <p> <bold>The new GLE LWB  </bold>luxury SUV available in India, offering a spacious and comfortable interior with a range of engine options and features</p>
+            <button>Learn more</button>
+          </div>   
+          <div class="cards">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNwD8FNzOV09ZyH2r4shVVf9qDjyBRD7zqTg&s" alt="">
+            <p><bold>The new GLA </bold> a compact SUV known for offering a taste of luxury in a practical footprint</p>
+            <button>Learn more</button>
+          </div> 
+          <div class="cards">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA-vBm8y9TRuvpLoNQG8G8_lkZq3TA4NRs4A&s" alt="">
+            <p><bold>The all new GLS 450d 4MATIC AMG </bold> Line a luxurious and sporty 7-seater SUV, featuring a powerful 3.0-liter inline-six diesel engine and all-wheel drive</p>
+            <button>Learn more</button>
+          </div>
+          <div class="cards">
+            <img src="./assets/car" alt="">
+            <p> <bold>Mercedes-Benz AMG GT 4-door Coupe Specifications 4.0-litre V8 with twin turbocharger</p>
+            <button>Learn more</button>
+          </div> 
+          <div class="cards">
+            <img src="./assets/car2" alt="">
+            <p> <bold>Mercedes-Benz EQS Specifications </bold> offering a spacious and comfortable interior with a range of engine options and features</p>
+            <button>Learn more</button>
+          </div>   
+          <div class="cards">
+            <img src="./assets/car3" alt="">
+            <p><bold>Mercedes-Benz Maybach S-Class Specifications </bold> 4.0L M176 Twin-Turbocharged V8 + 48V Mild Hybrid</p>
+            <button>Learn more</button>
+          </div>       
+        </div> 
+    
+    </main>
+    <footer>
+        <div class="footer-content"> 
+          <div class="footer-section">
+            <h3>Popular Models</h3>
+            <ul>
+              <li>Electric Cars</li>
+              <li>SUV</li>
+              <li>Cabriolets & Roadsters</li>
+              <li>Coupe</li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Buy a Vehicle</h3>
+            <ul>
+              <li>Find a new car</li>
+              <li>Model Overview</li>
+              <li>Configure your car</li>
+              <li>All brochures</li>
+              <li>Corporate Program</li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Shopping Guide </h3>
+            <ul>
+              <li>Book a test drive</li>
+              <li>Nearest Showroom</li>
+              <li>Finance</li>
+              <li>Mercedes-Benz Collection</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Discover Mercedes </h3>
+              <ul>
+               <li>Book a service appointment</li>
+               <li>Owner's Manuals</li>
+               <li>Service warranty terms and conditions</li>
+              </ul>
+          </div>
+          <div class="footer-section">
+           <h3>Our Support </h3>
+            <ul>
+              <li>Shipping</li>
+              <li>Online Payment</li>
+              <li>Customer help</li>
+           </ul>
+          </div>
+        </div>
+    </footer>
+  </body>
+</html>

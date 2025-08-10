@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Footer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .container ul {
+      display: flex;
+      background-color: rgb(237, 204, 228);
+      justify-content: space-around;
+      list-style: none;
+      padding: 20px;
+      border: 1px solid black;
+    }
+    .container ul li > a {
+      text-decoration: none;
+      padding: 10px 20px;
+      color: black;
+    }
+    footer {
+      background-color: #222;
+      width: 1200px;
+      color: whitesmoke;
+      padding: 40px 20px;
+      margin-top: 30px;
+      margin: 50px auto; 
+      border-radius: 10px;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-around;   
+    }
+    h3{
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 5px;
+    }
+   li{
+    list-style-type: none;
+    margin: 15px;
+   }
+   hr{
+    border: none;
+    height: 2px;
+    margin-left: 20px; 
+    max-width: 60px;
+    background-color: rgb(172, 24, 24);
+   }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <ul>
+        <li><a href="#">Home 1</a></li>
+        <li><a href="#">Home 2</a></li>
+        <li><a href="#">Home 3</a></li>
+        <li><a href="#">Home 4</a></li>
+      </ul>
+    </div>
+  </header>
+  <h3 >Responsive Footer Design</h3>
+  <footer>
+    
+    <div class="footer-content"> 
+      <div class="footer-section">
+        <h3>Company</h3>
+         <hr>
+        <ul>
+          <li>About Us</li>
+          <li>Our Service</li>
+          <li>privacy policy</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Services</h3>
+        <hr>
+        <ul>
+          <li>Any Queries</li>
+          <li>Quality</li>
+          <li>Clarification</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Our Support </h3>
+        <hr>
+        <ul>
+          <li>Shipping</li>
+          <li>Online Payment</li>
+          <li>Customer help</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+<!-- 
+ 1.universal selector-* (To the entier tags)
+ 2.just * - works as whole container
+ 3.classname * - works for each and every tag separately
+ 4.Decentent select- select child and grandchild (classname tag)space
+ 5.Direct/child select- only the direct childs (classname>tag)greaterthan
+ 6.justify-content - X axis
+ 7.items-aligned - Y axis
+ -->
