@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing page</title>
+    <style>
+        body{
+            margin:0;
+        }
+        #container{
+            transition-duration: 1s;
+            background-image:url(./assets/car.png) ;
+            height: 100vh;
+            background-size: contain;
+            position: relative;
+            width:100%;
+        }
+        .mini{
+            position: absolute;
+            display: flex;
+            bottom: 30px;
+            right: 25px;
+        }
+        .mini img{
+            width: 100px;
+            height: 50px;
+        }
+        #arr1{
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            left: 0px;
+            top: 50%;
+            transform: rotateY(180deg);
+        }
+        #arr2{
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            right: 0px;
+            top: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="arrow">
+            <img onclick=changeImg2() id="arr1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1rgnaKORrYuGGN4GYvdvNbuvZpqOS21ZVrg&s" alt="">
+            <img onclick=changeImg1() id="arr2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1rgnaKORrYuGGN4GYvdvNbuvZpqOS21ZVrg&s" alt="">
+        </div>
+        <div class="mini">
+             <img onclick="change(0)" src="./assets/car.png" alt="Loading">
+            <img onclick="change(1)" src="./assets/3784783.jpg" alt="Loading">
+            <img onclick="change(2)" src="./assets/5636755.jpg" alt="Loading">
+            <img onclick="change(3)" src="./assets/car1.jpg" alt="Loading">
+            <img onclick="change(4)" src="./assets/car2.jpg" alt="Loading">
+        </div>
+
+    </div>
+    <script src="./landing.js"></script>
+    
+</body>
+</html>
