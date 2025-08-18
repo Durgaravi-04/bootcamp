@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         *{
             margin:0;
             padding: 0;
             box-sizing: border-box;
+        }
+        body{
+          background-color: #000000;
         }
         /* Header */
         /* header {
@@ -21,7 +25,7 @@
           justify-content: space-between;
           align-items: center;
           font-family: 'Segoe UI', Arial, sans-serif;
-        } */
+        } 
          header{
           display: none;
          }
@@ -41,11 +45,167 @@
         }
         .nav-links div:hover {
           color: #ffdd00; 
+        }*/
+        .header{
+            margin-top: 0px;
+            width:100vw;
+            height:100px;
+            background-color: #000000;
+        }
+        .nav{
+            width:100vw;
+            height:100px;
+            display: flex;
+            background-color: rgb(0, 0, 0); 
+            font-size: 1.5rem; 
+            
+            z-index: 1000;
+        }
+        .b1{
+            width:30%;
+            /* background-color: blue; */
+            height: 100%;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+        .b2{
+            width:40%;
+            /* background-color: rgb(211, 175, 75); */
+            height: 100%;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+        .b3{
+            width:30%;
+            /* background-color: rgb(208, 111, 37); */
+            height: 100%;
+            display: flex;
+            align-items: center; 
+            position: relative;
+            justify-content: space-evenly;
+        }
+        .box3{
+          padding-left: 20px;
+          padding-right: 20px;
+          display: flex;
+          gap: 19px;
+        }
+         li{
+            list-style-type: none;
+            margin: 15px;
+        }
+        nav a {
+          color: white;
+          text-decoration: none;
+        }
+        .nav a:visited {
+          color: white;
+        }
+        .nav i {
+          color: white;
+          cursor:pointer;
+        }
+        .b2{
+          color: white;
+        }
+        .b3 {
+           position: relative; 
+        }
+       .location {
+            position: relative;
+        }  
+        .menu-box {
+          position: relative;
+        }
+        .menu-box summary {
+          list-style: none;
+          cursor: pointer;
+        }
+        .menu-popup {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 400px;
+          height: 400px;
+          background: rgb(165, 165, 165);
+          border: 1px solid black;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+        .search-bar {
+          width: 90%;
+          padding: 8px;
+          margin-bottom: 20px;
+          border-radius: 20px;
+        }
+        .menu-popup ul {
+          list-style: none;
+          padding: 0;
+        }
+        .menu-popup li {
+          padding: 10px 0;
+          border-bottom: 1px solid #ccc;
+          cursor: pointer;
+        }
+        .location {
+          position: relative;
+        }
+        .location summary {
+          list-style: none;
+          cursor: pointer;
+        }
+        .loc-popup {
+          position: absolute;
+          margin: 10px;
+          top: 100%;
+          right: 0;
+          width: 400px;
+          height: 300px;
+          background: rgb(165, 165, 165);
+          border: 1px solid black;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+        }
+        .loc-popup p{
+          margin-top: 0;
+        }
+        .pincode-input {
+          width: 80%;
+          padding: 10px;
+          border-radius: 20px;
+        }
+        .submit-btn {
+          padding: 10px;
+          width: 30%;
+          background-color: black;
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 20px;
+          align-self: center;
+          margin-top: 20px;
+        }
+        .dis{
+          color: aliceblue;
+          margin-left: 20px;
+        }
+        .box{
+          width: 100%;
+          height: 150px;
+          margin-top: 50px;
+          display: flex;
+          gap: 10px;
+          justify-content: space-around;
+          display: flex;
+          flex-direction: row;
         }
         /* Container  */
         #container{
             transition-duration: 1s;
-            background-image:url(./assets/car.png) ;
+            /* background-image:url(./assets/car.png) ; */
             height: 100vh;
             background-size: cover; 
             background-position: center;
@@ -157,7 +317,7 @@
             width: 100%;
             color: whitesmoke;
             padding: 40px 20px;
-            margin-top: 0px;
+            margin-top: 20px;
         }
         .footer-content {
             display: flex;
@@ -168,7 +328,53 @@
             margin: 15px;
             font-size: large;
         }
-        @media screen and (min-width:800px) {
+        /* info */
+        .info-cards {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          padding: 40px 20px;
+          background: #000000; 
+          margin-top: 30px;
+        }
+
+        .info-card {
+          flex: 1 1 200px;
+          max-width: 250px;
+          background: #e6e4e4;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          text-align: center;
+          padding: 25px 20px;
+          margin: 10px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .info-card i {
+          font-size: 30px;
+          margin-bottom: 15px;
+          color: #1a1745; 
+        }
+
+        .info-card h3 {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: #222;
+        }
+
+        .info-card p {
+          font-size: 14px;
+          color: #555;
+        }
+
+        .info-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+        }
+
+
+        /* @media screen and (min-width:800px) {
           header {
           width: 100%;
           height: 40px;
@@ -180,18 +386,79 @@
           align-items: center;
           font-family: 'Segoe UI', Arial, sans-serif;
         }
+        } */
+        .models {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          padding: 40px;
         }
+
+        .model-card {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background: #c6c7c8;
+          padding: 20px;
+          border-radius: 5px;
+        }
+
+        .model-text p {
+          font-size: 14px;
+          color: #555;
+          margin-bottom: 5px;
+        }
+
+        .model-text h2 {
+          font-size: 28px;
+          font-weight: 500;
+        }
+
+        .model-img img {
+          max-width: 300px;
+          height: auto;
+        }
+
     </style>
 </head>
 <body>
-    <header>
-      <div class="logo">Car Collections</div>
-      <div class="nav-links">
-        <div>Home</div>
-        <div>About</div>
-        <div>Services</div>
-        <div>Contact</div>
-      </div>
+     <header class="header">   
+            <div class="nav">
+               <div class="b1">
+                   <details class="menu-box">
+                  <summary><i class="fa-solid fa-bars"></i></summary>
+                  <div class="menu-popup">
+                    <input type="text" placeholder="Search..." class="search-bar">
+                    <ul>
+                      <li>Model</li>
+                      <li>Buy</li>
+                      <li>Service</li>
+                      <li>Brand</li>
+                    </ul>
+                  </div>
+                </details>
+                </div>
+                <div class="b2">
+                   Mercedes-BENZ
+                </div>
+                <div class="b3">
+                    <div class="box3">
+                      <i class="fa-regular fa-star"></i>
+                      <details class="location">
+                        <summary><i class="fa-solid fa-location-dot"></i></summary>
+                        <div class="loc-popup">
+                          <h4>Enter Pincode</h4>
+                          <p style="font-size: smaller;">Please enter your pincode so we can provide you with location specific information, including pricing and offers.</p>
+                          <input type="text" placeholder="Enter Pincode" class="pincode-input">
+                          <button class="submit-btn">Submit</button>
+                        </div>
+                      </details>
+                      <a href="login.html">
+                        <i class="fa-solid fa-circle-user"></i>
+                      </a>
+                    </div>
+                </div>
+            </div>
     </header>
     <div id="container">
         <div class="arrow">
@@ -203,10 +470,51 @@
             <img class="img" onclick="change(1)" src="./assets/sports.jpg" alt="Loading">
             <img class="img"  onclick="change(2)" src="./assets/grey.jpg" alt="Loading">
             <img class="img" onclick="change(3)" src="./assets/white.jpg" alt="Loading">
-            <img class="img" onclick="change(4)" src="./assets/blue (1).jpg" alt="Loading">
+            <img class="img" onclick="change(4)" src="./assets/blue.jpg" alt="Loading">
         </div>
 
     </div>
+    <section class="models">
+  <div class="model-card">
+    <div class="model-text">
+      <p>Discover the models</p>
+      <h2>Limousine</h2>
+    </div>
+    <div class="model-img">
+      <img src="./assets/white.jpg" alt="Limousine">
+    </div>
+  </div>
+
+  <div class="model-card">
+    <div class="model-text">
+      <p>Discover the models</p>
+      <h2>SUV Range</h2>
+    </div>
+    <div class="model-img">
+      <img src="./assets/sports.jpg" alt="SUV Range">
+    </div>
+  </div>
+
+  <div class="model-card">
+    <div class="model-text">
+      <p>Discover the models</p>
+      <h2>Cabriolets / Roadsters</h2>
+    </div>
+    <div class="model-img">
+      <img src="./assets/grey.jpg" alt="Cabriolets / Roadsters">
+    </div>
+  </div>
+  <div class="model-card">
+    <div class="model-text">
+      <p>Discover the models</p>
+      <h2>SUV Range</h2>
+    </div>
+    <div class="model-img">
+      <img src="./assets/black.jpg" alt="SUV Range">
+    </div>
+  </div>
+</section>
+
     <main class="main"> 
         <div class="card">
           <div class="cards">
@@ -240,17 +548,44 @@
             <button>Learn more</button>
           </div>
           <div class="cards">
-            <img src="./assets/white.jpg" alt="">
+            <img src="./assets/red.jpg" alt="">
             <p> <bold>Mercedes-Benz AMG GT 4-door Coupe Specifications 4.0-litre V8 with twin turbocharger</p>
             <button>Learn more</button>
           </div> 
           <div class="cards">
-            <img src="./assets/blue (1).jpg" alt="">
+            <img src="./assets/blue.jpg" alt="">
             <p><bold>Mercedes-Benz Maybach S-Class Specifications </bold> 4.0L M176 Twin-Turbocharged V8 + 48V Mild Hybrid</p>
             <button>Learn more</button>
           </div>       
         </div> 
-      </main>
+    </main>
+    <section class="info-cards">
+      <div class="info-card">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h3>Mercedes-Benz Store</h3>
+        <p>Discover your new Mercedes.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Dealer Locator</h3>
+        <p>Find a Mercedes-Benz dealer.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-gears"></i>
+        <h3>Configurator</h3>
+        <p>Configure your vehicle now.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-calculator"></i>
+        <h3>Finance & Insurance</h3>
+        <p>Find the right financial product for you.</p>
+      </div>
+    </section>
+
+
        <footer>
         <div class="footer-content"> 
           <div class="footer-section">

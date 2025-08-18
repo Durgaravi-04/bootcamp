@@ -4,12 +4,15 @@ const arr = ["./assets/black.jpg",
     "./assets/sports.jpg",
     "./assets/grey.jpg",
     "./assets/white.jpg",
-    "./assets/blue (1).jpg"
+    "./assets/blue.jpg"
 ];
 const img = document.getElementsByClassName("img")
 console.log(img);
 
 let i = 0;
+con.style.backgroundImage = `url(${arr[i]})`;
+
+
 let changeImg1 = () => {
     img[i].classList.remove("active")
     i++;
