@@ -1,16 +1,22 @@
 const con = document.getElementById("container")
+
 const arr = ["./assets/black.jpg",
     "./assets/sports.jpg",
     "./assets/grey.jpg",
     "./assets/white.jpg",
     "./assets/blue (1).jpg"
 ];
+const img = document.getElementsByClassName("img")
+console.log(img);
+
 let i = 0;
 let changeImg1 = () => {
+    img[i].classList.remove("active")
     i++;
     if (i == arr.length) {
         i = 0;
     }
+    img[i].classList.add("active")
     con.style.backgroundImage = `url(${arr[i]})`;
 
 }
@@ -25,6 +31,6 @@ let change = (a) => {
     con.style.backgroundImage = `url(${arr[a]})`;
 }
 
-setInterval(() => {
-    changeImg1();
-}, 2000);
+// setInterval(() => {
+//     changeImg1();
+// }, 2000);

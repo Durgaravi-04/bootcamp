@@ -52,12 +52,23 @@
             position: absolute;
             display: flex;
             bottom: 40px;
-            gap: 5px;
+            gap: 10px;
             right: 30px;
+          
         }
         .mini img{
             width: 100px;
             height: 50px;
+            opacity: 0.5;
+            border-radius: 5px;
+        }
+        .mini .active{
+          opacity: 1;
+        }
+        .mini img:hover{
+          transform: scale(1.2);
+          opacity: 1;
+          outline-color: white;
         }
         #arr1{
             position: absolute;
@@ -167,11 +178,11 @@
             <img onclick=changeImg1() id="arr2" src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="">
         </div>
         <div class="mini">
-             <img onclick="change(0)" src="./assets/black.jpg" alt="Loading">
-            <img onclick="change(1)" src="./assets/sports.jpg" alt="Loading">
-            <img onclick="change(2)" src="./assets/grey.jpg" alt="Loading">
-            <img onclick="change(3)" src="./assets/white.jpg" alt="Loading">
-            <img onclick="change(4)" src="./assets/blue (1).jpg" alt="Loading">
+             <img class="img active" onclick="change(0)" src="./assets/black.jpg" alt="Loading">
+            <img class="img" onclick="change(1)" src="./assets/sports.jpg" alt="Loading">
+            <img class="img"  onclick="change(2)" src="./assets/grey.jpg" alt="Loading">
+            <img class="img" onclick="change(3)" src="./assets/white.jpg" alt="Loading">
+            <img class="img" onclick="change(4)" src="./assets/blue (1).jpg" alt="Loading">
         </div>
 
     </div>
