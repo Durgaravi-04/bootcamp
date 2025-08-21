@@ -133,6 +133,7 @@
           border: 1px solid black;
           padding: 20px;
           box-sizing: border-box;
+          z-index: 2000;
         }
         .search-bar {
           width: 90%;
@@ -168,6 +169,7 @@
           padding: 20px;
           display: flex;
           flex-direction: column;
+          z-index: 2000;
         }
         .loc-popup p{
           margin-top: 0;
@@ -185,7 +187,7 @@
           border: none;
           cursor: pointer;
           border-radius: 20px;
-          align-self: center;
+          
           margin-top: 20px;
         }
         .dis{
@@ -449,7 +451,7 @@
                         <div class="loc-popup">
                           <h4>Enter Pincode</h4>
                           <p style="font-size: smaller;">Please enter your pincode so we can provide you with location specific information, including pricing and offers.</p>
-                          <input type="text" placeholder="Enter Pincode" class="pincode-input">
+                          <input style="margin-top: 20px;" type="text" placeholder="Enter Pincode" class="pincode-input">
                           <button class="submit-btn">Submit</button>
                         </div>
                       </details>
