@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <Style>
+    body{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        background-color: black;
+    }
+        form{
+            width: 600px;
+            height:320px;
+            background-color: rgb(249, 248, 247);
+            border:1px solid black ; 
+            align-items: center;
+            justify-content: space-evenly;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .inp input{
+            border: none;
+            outline:none
+            
+        }
+        .inp{
+            background-color: rgb(255, 255, 255);
+            border:1px solid rgb(58, 93, 180);
+            padding :10px;
+            width:200px;
+            margin: 10px;
+        }
+        p{
+            margin-top: 1px;
+            color: black;
+
+        }
+        button{
+            background-color: rgb(44, 178, 227);
+            cursor: pointer;
+            padding-left:20px ;
+            padding-right: 20px;
+            width:80%;
+            padding:10px;
+            margin-top: 20px;
+            border: none;
+        }
+        .inp{
+            width: 80%;
+            padding-left:2px ;
+            padding-right: 2px;
+        }
+        h2{
+            color: rgb(44, 178, 227);
+        }
+    </Style>
+</head>
+<body>
+    <form>
+        <h2>Create a Account</h2>
+        <p>Please enter your e-mail address and password to create account</p>
+        <div class="inp">
+            <label for="email">  
+            </label>
+            <input type="text" name="email" id="email"value="" placeholder="Email Address">
+        </div>
+         <div class="inp">
+            <label for="pass">  
+            </label>
+            <input type="password" name="pass" id="pass"value="" placeholder="Password">
+        </div>
+
+        <button>Continue</button>
+        <p style="margin-top: 15px;">Already have a Mercedes account ? Login</p>
+    </form>
+    
+</body>
+</html>
